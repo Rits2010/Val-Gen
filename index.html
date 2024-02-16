@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Valo Agent Generator</title>
+    <style>
+        #generateButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #generateButton:hover {
+            background-color: #45a049;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Valo Agent Generator</h1>
+    <button id="generateButton" onclick="getRandomString(stringsArray)">Click to generate</button>
+    <h2 class="agent"></h2>
+    <script>
+        var stringsArray = ["Killjoy", "Omen", "Raze", "Jett", "Sage", "Sova", "Viper", "Reyna", "Brimstone", "Astra", "Neon", "Breach", "Cypher", "Pheonix", "Chamber", "Fade", "Skye", "Harbor", "Yoru", "Gekko", "Deadlock"];
+
+        function getRandomString(array) {
+            var randomIndex = Math.floor(Math.random() * array.length);
+            // Add this array[randomIndex] to class agent in HTML
+            document.querySelector(".agent").innerHTML = "Play " + array[randomIndex];
+            document.querySelector("#generateButton").innerHTML = "Re-Generate";
+            return
+        }
+
+    </script>
+</body>
+
+</html>
